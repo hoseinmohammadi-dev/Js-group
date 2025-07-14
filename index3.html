@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عوض کردن جای اعداد</title>
+</head>
+
+<body>
+    <h2>2- برنامه ای بنویسید که دو عدد را از کاربر گرفته و جای آنها را با هم عوض کند.</h2>
+    <input type="text" id="inp1">
+    <input type="text" id="inp2">
+    <button>جا به جا کنید</button>
+    <p></p>
+
+
+    <script>
+        const btn = document.querySelector("button")
+        const result = document.querySelector("p")
+        
+        btn.addEventListener('click', ()=>{
+            let inp1 = +(document.querySelector("#inp1").value)
+            let inp2 = +(document.querySelector("#inp2").value)
+            let temp = inp1
+            inp1 = inp2
+            inp2 = temp
+
+            result.innerText = `عدد اول : ${inp1} , عدد دوم : ${inp2}`
+        })
+    </script>
+</body>
+
+</html>

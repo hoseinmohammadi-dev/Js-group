@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>4- برنامه ای بنویسید که از صد تا صفر در خروجی چاپ کند.</h2>
+
+    <button>click me</button>
+    <ul id="even">
+        <h3>اعداد زوج</h3>
+    </ul>
+    <ul id="odd">
+        <h3>اعداد فرد</h3>
+    </ul>
+
+    <script>
+        const btn = document.querySelector("button")
+        const even = document.querySelector("ul#even")
+        const odd = document.querySelector("ul#odd")
+
+        btn.addEventListener("click", () => {
+            for (let i = 0; i <= 100; i++) {
+                if (i % 2 === 0) {
+                    let myLi = document.createElement("li")
+                    myLi.textContent = i
+                    even.appendChild(myLi) 
+                }else{
+                    let myLi = document.createElement("li")
+                    myLi.textContent = i
+                    odd.appendChild(myLi)    
+                }
+
+            }
+        })
+    </script>
+</body>
+
+</html>

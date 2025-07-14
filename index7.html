@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scroll Test</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    div {
+      width: 100vw;
+      border: 1px solid black;
+    }
+    #box1 {
+      height: 50vh;
+    }
+    #box2 {
+      height: 150vh; /* صفحه رو اسکرول‌پذیر می‌کنه */
+    }
+    .bgRed {
+      background-color: red;
+      width: 20vw;
+      border: 10px dotted green;
+    }
+    .bgBlue {
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="box1">box 1</div>
+  <div id="box2">box 2</div>
+
+  <script>
+    const box1 = document.querySelector("#box1");
+
+    window.addEventListener("scroll", () => {
+      box1.classList.add("bgRed");
+    });
+
+    localStorage.setItem("name" , "mohammad")
+
+    let name = localStorage.getItem("name")
+    console.log(name);
+
+    
+    
+  </script>
+</body>
+</html>
