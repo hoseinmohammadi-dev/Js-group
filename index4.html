@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>3- برنامه ای بنویسید که عدد را از کاربر گرفته و مشخص کند زوج است یا فرد.</h2>
+
+    <input type="text" placeholder="inter a number">
+    <button>click</button>
+    <span></span>
+
+    <script>
+        const input = document.querySelector("input")
+        const result = document.querySelector("span")
+        const btn = document.querySelector("button")
+
+
+
+        btn.addEventListener("click", () => {
+            let inputValue = Number(input.value)
+
+            if (isNaN(inputValue)) {
+                result.innerText = "آدم باش "
+                result.style.color = "red"
+                result.style.fontSize = "50px"
+            } else if (inputValue % 2 === 0) {
+                result.innerText = `عدد ${inputValue} زوج است`
+            } else {
+                result.innerText = `عدد ${inputValue} فرد است`
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>
